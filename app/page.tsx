@@ -1,101 +1,158 @@
+"use client";
 import Image from "next/image";
+import { BiLocationPlus } from "react-icons/bi";
+import {
+  FaEnvelope,
+  FaExternalLinkAlt,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaPhone,
+  FaTiktok,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 
-export default function Home() {
+const SocialLinksPage = () => {
+  const links = [
+    // {
+    //   title: "Website",
+    //   url: "http://www.yadnxd.com",
+    //   icon: FaGlobe,
+    //   description: "Discover more about our services and projects",
+    //   bgColor: "bg-white",
+    //   hoverColor: "hover:bg-gray-50",
+    // },
+
+    {
+      title: "Twitter",
+      url: "https://x.com/yadnxd?t=xESgy0TMXyGCJivzdbRQ0A&s=09",
+      icon: FaTwitter,
+      description: "Follow us for the latest updates and news",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+    {
+      title: "LinkedIn",
+      url: "https://www.linkedin.com/company/yadnxd/",
+      icon: FaLinkedin,
+      description: "Connect with us professionally",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+    {
+      title: "Instagram",
+      url: "https://www.instagram.com/yadnxd?igsh=Y2xpYzFncWVwdzY5",
+      icon: FaInstagram,
+      description: "Get a glimpse behind the scenes of YADN",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+    {
+      title: "Facebook",
+      url: "https://www.facebook.com/profile.php?id=61551582941267&mibextid=ZbWKwL",
+      icon: FaFacebook,
+      description: "Follow us on Facebook",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+    {
+      title: "TikTok",
+      url: "https://www.tiktok.com/@yadnxd",
+      icon: FaTiktok,
+      description: "Watch our latest TikTok videos",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+    {
+      title: "Mail",
+      url: "mailto:info@yadnxd.com",
+      icon: FaEnvelope,
+      description: "Contact us via email",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+    {
+      title: "WhatsApp",
+      url: "https://wa.me/+966550513539",
+      icon: FaWhatsapp, // Use an appropriate icon for WhatsApp if desired
+      description: "Chat with us on WhatsApp",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+    {
+      title: "Phone",
+      url: "tel:+966550513539",
+      icon: FaPhone,
+      description: "Call us",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+    {
+      title: "Location",
+      url: "https://maps.app.goo.gl/ZMZZ8cKnNqEyAyJ66",
+      icon: BiLocationPlus,
+      description: "Find us here",
+      bgColor: "bg-white",
+      hoverColor: "hover:bg-gray-50",
+    },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen flex flex-col justify-between bg-[#F3F3F3] px-4">
+      <div className="max-w-2xl w-full mx-auto py-8 flex flex-col items-center">
+        {/* Profile Section */}
+        <div className="flex flex-col items-center mb-6">
+          <a className="mb-4" href="http://www.yadnxd.com" target="_blank">
+            <Image src="/logo.svg" alt="YADN Logo" width={100} height={100} />
+          </a>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        {/* Links Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+          {links.map((link, index) => {
+            const Icon = link.icon;
+            return (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center justify-between p-4 rounded-xl bg-[#E7E0E0] ${link.hoverColor} 
+                  transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100
+                  transform hover:-translate-y-1`}
+              >
+                <div className="flex items-center space-x-4">
+                  <Icon className="w-6 h-6 text-[#ED1E78] group-hover:text-gray-800 transition-colors" />
+                  <div>
+                    <h2 className="text-lg font-semibold text-gray-800">
+                      {link.title}
+                    </h2>
+                    <p className="text-sm text-gray-500 mt-1">
+                      {link.description}
+                    </p>
+                  </div>
+                </div>
+                <FaExternalLinkAlt className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="text-center text-gray-500 py-4">
+        <p className="text-sm">
+          © {new Date().getFullYear()}{" "}
+          <span className="font-medium text-gray-600">YADN</span>
+          {" • "}
+          <span className="text-gray-400">Innovating the Future</span>
+        </p>
       </footer>
     </div>
   );
-}
+};
+
+export default SocialLinksPage;
