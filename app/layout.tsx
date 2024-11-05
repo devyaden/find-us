@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "تطبيق نكست",
-  description: "تم إنشاؤه بواسطة تطبيق نكست",
+  title: "تواصل معنا",
+  description: "تواصل مع يدن",
   keywords:
     "YADN, تواصل اجتماعي, تويتر, لينكد إن, إنستغرام, فيسبوك, تيك توك, واتساب, البريد الإلكتروني",
   openGraph: {
