@@ -8,6 +8,7 @@ import { LuPhone } from "react-icons/lu";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiTiktokLine } from "react-icons/ri";
 import { SlSocialLinkedin } from "react-icons/sl";
+import Head from "next/head";
 
 const SocialLinksPage = () => {
   const links = [
@@ -86,59 +87,93 @@ const SocialLinksPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#F3F3F3] px-4 rtl">
-      <div className="max-w-2xl w-full mx-auto py-8 flex flex-col items-center">
-        {/* Profile Section */}
-        <div className="flex flex-col items-center mb-6">
-          <a className="mb-4" href="http://www.yadnxd.com" target="_blank">
-            <Image src="/logo.svg" alt="YADN Logo" width={100} height={100} />
-          </a>
+    <>
+      <Head>
+        <title>الروابط الاجتماعية | YADN</title>
+        <meta
+          name="description"
+          content="صفحة الروابط الاجتماعية لـ YADN، تابعنا على جميع منصات التواصل الاجتماعي لمعرفة أحدث الأخبار والتحديثات."
+        />
+        <meta
+          name="keywords"
+          content="YADN, تويتر, لينكد إن, إنستغرام, فيسبوك, تيك توك, واتساب, تواصل, البريد الإلكتروني"
+        />
+        <meta
+          property="og:title"
+          content="تابع YADN على وسائل التواصل الاجتماعي"
+        />
+        <meta
+          property="og:description"
+          content="احصل على روابط مباشرة لجميع حساباتنا الاجتماعية وتواصل معنا عبر مختلف المنصات."
+        />
+        <meta property="og:image" content="/logo.svg" />
+        <meta property="og:url" content="https://yadnxd.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="تابع YADN على وسائل التواصل الاجتماعي"
+        />
+        <meta
+          name="twitter:description"
+          content="تواصل معنا عبر منصاتنا الاجتماعية المختلفة."
+        />
+        <meta name="twitter:image" content="/logo.svg" />
+      </Head>
 
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4" />
-        </div>
+      <div className="min-h-screen flex flex-col justify-between bg-[#F3F3F3] px-4 rtl">
+        <div className="max-w-2xl w-full mx-auto py-8 flex flex-col items-center">
+          {/* Profile Section */}
+          <div className="flex flex-col items-center mb-6">
+            <a className="mb-4" href="http://www.yadnxd.com" target="_blank">
+              <Image src="/logo.svg" alt="YADN Logo" width={100} height={100} />
+            </a>
 
-        {/* Links Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-          {links.map((link, index) => {
-            const Icon = link.icon;
-            return (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group flex items-center justify-between p-4 rounded-xl bg-[#E7E0E0] ${link.hoverColor} 
-                  transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100
-                  transform hover:-translate-y-1`}
-              >
-                <div className="flex items-center space-x-reverse space-x-4">
-                  <Icon className="w-6 h-6 text-[#ED1E78] group-hover:text-gray-800 transition-colors" />
-                  <div className="text-right">
-                    <h2 className="text-lg font-semibold text-gray-800">
-                      {link.title}
-                    </h2>
-                    <p className="text-sm text-gray-500 mt-1">
-                      {link.description}
-                    </p>
+            <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4" />
+          </div>
+
+          {/* Links Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+            {links.map((link, index) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group flex items-center justify-between p-4 rounded-xl bg-[#E7E0E0] ${link.hoverColor} 
+                    transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100
+                    transform hover:-translate-y-1`}
+                >
+                  <div className="flex items-center space-x-reverse space-x-4">
+                    <Icon className="w-6 h-6 text-[#ED1E78] group-hover:text-gray-800 transition-colors" />
+                    <div className="text-right">
+                      <h2 className="text-lg font-semibold text-gray-800">
+                        {link.title}
+                      </h2>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {link.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <FaExternalLinkAlt className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
-              </a>
-            );
-          })}
+                  <FaExternalLinkAlt className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                </a>
+              );
+            })}
+          </div>
         </div>
-      </div>
 
-      {/* Footer */}
-      <footer className="text-center text-gray-500 py-4">
-        <p className="text-sm">
-          © {new Date().getFullYear()}{" "}
-          <span className="font-medium text-gray-600">یدن</span>
-          {" • "}
-          <span className="text-gray-400">ابتكار المستقبل</span>
-        </p>
-      </footer>
-    </div>
+        {/* Footer */}
+        <footer className="text-center text-gray-500 py-4">
+          <p className="text-sm">
+            © {new Date().getFullYear()}{" "}
+            <span className="font-medium text-gray-600">یدن</span>
+            {" • "}
+            <span className="text-gray-400">ابتكار المستقبل</span>
+          </p>
+        </footer>
+      </div>
+    </>
   );
 };
 
