@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+//import favicon from './favicon.ico'
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "تواصل معنا عبر منصاتنا الاجتماعية المختلفة.",
     images: [
       {
-        url: "/logo.svg",
+        url: "https://raw.githubusercontent.com/devyaden/find-us/refs/heads/main/app/favicon.ico",
         alt: "YADN Logo",
       },
     ],
