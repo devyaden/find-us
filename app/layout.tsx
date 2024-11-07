@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://yadnxd.com",
     images: [
       {
-        url: "https://raw.githubusercontent.com/devyaden/find-us/refs/heads/main/app/favicon.ico",
+        url: "./favicon.ico",
         alt: "YADN Logo",
       },
     ],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "تواصل معنا عبر منصاتنا الاجتماعية المختلفة.",
     images: [
       {
-        url: "https://raw.githubusercontent.com/devyaden/find-us/refs/heads/main/app/favicon.ico",
+        url: "./favicon.ico",
         alt: "YADN Logo",
       },
     ],
