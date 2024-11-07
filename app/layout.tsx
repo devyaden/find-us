@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://yadnxd.com",
     images: [
       {
-        url: "/logo.svg",
+        url: "https://raw.githubusercontent.com/devyaden/find-us/refs/heads/main/app/favicon.ico",
         alt: "YADN Logo",
       },
     ],
@@ -41,6 +41,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  
 };
 
 export default function RootLayout({
