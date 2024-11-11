@@ -32,7 +32,7 @@ const SocialLinksPage = () => {
       title: "إنستغرام",
       url: "https://www.instagram.com/yadnxd?igsh=Y2xpYzFncWVwdzY5",
       icon: FaInstagram,
-      description: "اكتشف الجانب الآخر من YADN",
+      description: "اكتشف الجانب الآخر من يدن",
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
