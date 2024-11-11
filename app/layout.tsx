@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "./opengraph-image.png",
-        alt: "YADN Logo",
+        alt: "YADN icon",
       },
     ],
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "./opengraph-image.png",
-        alt: "YADN Logo",
+        alt: "YADN cc",
       },
     ],
   },
