@@ -13,7 +13,7 @@ import Head from "next/head";
 const SocialLinksPage = () => {
   const links = [
     {
-      title: "تويتر",
+      title: "اكس",
       url: "https://x.com/yadnxd?t=xESgy0TMXyGCJivzdbRQ0A&s=09",
       icon: FaXTwitter,
       description: "تابعنا لأحدث الأخبار والتحديثات",
