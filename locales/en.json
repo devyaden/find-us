@@ -24,15 +24,15 @@
     "location": "Location"
   },
   "descriptions": {
-    "twitter": "Follow us for latest news and updates",
+    "twitter": "Yadn News",
     "linkedin": "Connect with us professionally",
-    "instagram": "Discover another side of YADN",
-    "facebook": "Follow us on Facebook",
+    "instagram": "Yadn’s creativity",
+    "facebook": "Yadns’ creativity and news",
     "tiktok": "Watch our latest videos on TikTok",
     "email": "Contact us via email",
-    "whatsapp": "Chat with us on WhatsApp",
-    "phone": "Call us",
-    "location": "Find us here"
+    "whatsapp": "Ask about Yadn",
+    "phone": "Talk to Yadn",
+    "location": "Pay us a visit"
   },
   "footer": {
     "copyright": "All rights reserved",
