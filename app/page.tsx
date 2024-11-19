@@ -1,4 +1,7 @@
 "use client";
+import { getLocale } from "@/utils/get-locale";
+import { getTranslations } from "@/utils/translations";
+import Head from "next/head";
 import Image from "next/image";
 import { BiLocationPlus } from "react-icons/bi";
 import { CiFacebook } from "react-icons/ci";
@@ -8,79 +11,83 @@ import { LuPhone } from "react-icons/lu";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiTiktokLine } from "react-icons/ri";
 import { SlSocialLinkedin } from "react-icons/sl";
-import Head from "next/head";
 
 const SocialLinksPage = () => {
+  const locale = getLocale();
+  const t = getTranslations(locale);
+
+  const isRTL = locale === "ar";
+
   const links = [
     {
-      title: "اكس",
+      title: t.social.twitter,
       url: "https://x.com/yadnxd?t=xESgy0TMXyGCJivzdbRQ0A&s=09",
       icon: FaXTwitter,
-      description: "تابعنا لأحدث الأخبار والتحديثات",
+      description: t.descriptions.twitter,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
     {
-      title: "لينكد إن",
+      title: t.social.linkedin,
       url: "https://www.linkedin.com/company/yadnxd/",
       icon: SlSocialLinkedin,
-      description: "تواصل معنا مهنياً",
+      description: t.descriptions.linkedin,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
     {
-      title: "إنستغرام",
+      title: t.social.instagram,
       url: "https://www.instagram.com/yadnxd?igsh=Y2xpYzFncWVwdzY5",
       icon: FaInstagram,
-      description: "اكتشف الجانب الآخر من يدن",
+      description: t.descriptions.instagram,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
     {
-      title: "فيسبوك",
+      title: t.social.facebook,
       url: "https://www.facebook.com/profile.php?id=61551582941267&mibextid=ZbWKwL",
       icon: CiFacebook,
-      description: "تابعنا على فيسبوك",
+      description: t.descriptions.facebook,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
     {
-      title: "تيك توك",
+      title: t.social.tiktok,
       url: "https://www.tiktok.com/@yadnxd",
       icon: RiTiktokLine,
-      description: "شاهد آخر فيديوهاتنا على تيك توك",
+      description: t.descriptions.tiktok,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
     {
-      title: "البريد الإلكتروني",
+      title: t.social.email,
       url: "mailto:info@yadnxd.com",
       icon: MdOutlineMailOutline,
-      description: "تواصل معنا عبر البريد الإلكتروني",
+      description: t.descriptions.email,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
     {
-      title: "واتساب",
+      title: t.social.whatsapp,
       url: "https://wa.me/+966550513539",
       icon: FaWhatsapp,
-      description: "تحدث معنا عبر واتساب",
+      description: t.descriptions.whatsapp,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
     {
-      title: "الهاتف",
+      title: t.social.phone,
       url: "tel:+966550513539",
       icon: LuPhone,
-      description: "اتصل بنا",
+      description: t.descriptions.phone,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
     {
-      title: "الموقع",
+      title: t.social.location,
       url: "https://maps.app.goo.gl/ZMZZ8cKnNqEyAyJ66",
       icon: BiLocationPlus,
-      description: "اعثر علينا هنا",
+      description: t.descriptions.location,
       bgColor: "bg-white",
       hoverColor: "hover:bg-gray-50",
     },
@@ -120,7 +127,7 @@ const SocialLinksPage = () => {
         <meta name="twitter:image" content="/logo.svg" />
       </Head>
 
-      <div className="min-h-screen flex flex-col justify-between bg-[#F3F3F3] px-4 rtl">
+      <div className="min-h-screen flex flex-col justify-between bg-[#F3F3F3] px-4">
         <div className="max-w-2xl w-full mx-auto py-8 flex flex-col items-center">
           {/* Profile Section */}
           <div className="flex flex-col items-center mb-6">
@@ -132,7 +139,11 @@ const SocialLinksPage = () => {
           </div>
 
           {/* Links Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 gap-4 w-full ${
+              isRTL ? "rtl" : ""
+            }`}
+          >
             {links.map((link, index) => {
               const Icon = link.icon;
               return (
@@ -141,22 +152,33 @@ const SocialLinksPage = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex items-center justify-between p-4 rounded-xl bg-[#E7E0E0] ${link.hoverColor} 
+                  className={`group flex items-center justify-between p-4 rounded-xl bg-[#E7E0E0] ${
+                    link.hoverColor
+                  } 
                     transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100
-                    transform hover:-translate-y-1`}
+                    transform hover:-translate-y-1 ${
+                      isRTL ? "flex-row-reverse" : ""
+                    }`}
                 >
-                  <div className="flex items-center space-x-reverse space-x-4">
-                    <Icon className="w-6 h-6 text-[#ED1E78] group-hover:text-gray-800 transition-colors" />
-                    <div className="text-right">
-                      <h2 className="text-lg font-semibold text-gray-800">
-                        {link.title}
-                      </h2>
-                      <p className="text-sm text-gray-500 mt-1">
-                        {link.description}
-                      </p>
-                    </div>
+                  <FaExternalLinkAlt
+                    className={`w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors order-3`}
+                  />
+
+                  <div
+                    className={`flex-1 order-2 ${
+                      isRTL ? "text-right" : "text-left"
+                    }`}
+                  >
+                    <h2 className="text-lg font-semibold text-gray-800">
+                      {link.title}
+                    </h2>
+                    <p className="text-sm text-gray-500 mt-1">
+                      {link.description}
+                    </p>
                   </div>
-                  <FaExternalLinkAlt className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                  <Icon
+                    className={`w-6 h-6 text-[#ED1E78] group-hover:text-gray-800 mx-4 transition-colors order-1`}
+                  />
                 </a>
               );
             })}
@@ -167,9 +189,9 @@ const SocialLinksPage = () => {
         <footer className="text-center text-gray-500 py-4">
           <p className="text-sm">
             © {new Date().getFullYear()}{" "}
-            <span className="font-medium text-gray-600">یدن</span>
+            <span className="font-medium text-gray-600">YADN</span>
             {" • "}
-            <span className="text-gray-400">ابتكار المستقبل</span>
+            <span className="text-gray-400">{t.footer.slogan}</span>
           </p>
         </footer>
       </div>

@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "Contact Us",
+    "description": "At YADN, we provide business solutions tailored to your company's needs and administrative structure, offering solutions for efficient development and growth.",
+    "keywords": "Yadn, Al-Safar Group, business solutions, policy governance, procedure governance, service design, knowledge management, digitization, digital transformation, company growth, administrative structure, corporate development, business consulting, efficient growth, business innovation, management solutions, business policy, service management, digital services",
+    "openGraph": {
+      "title": "YADN is present on all social media platforms",
+      "description": "Find direct links to all our accounts here"
+    },
+    "twitter": {
+      "title": "YADN is present on all social media platforms",
+      "description": "With Yadn you will reach the highest levels of efficiency."
+    }
+  },
+  "social": {
+    "twitter": "X",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "phone": "Phone",
+    "location": "Location"
+  },
+  "descriptions": {
+    "twitter": "Follow us for latest news and updates",
+    "linkedin": "Connect with us professionally",
+    "instagram": "Discover another side of YADN",
+    "facebook": "Follow us on Facebook",
+    "tiktok": "Watch our latest videos on TikTok",
+    "email": "Contact us via email",
+    "whatsapp": "Chat with us on WhatsApp",
+    "phone": "Call us",
+    "location": "Find us here"
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "slogan": "Creating the Future"
+  }
+}
