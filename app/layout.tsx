@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: "https://yadnxd.com",
       images: [
         {
-          url: "./opengraph-image.png",
+          url: "./opengraph-image.jpj",
           alt: "YADN icon",
         },
       ],
